@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Nana Oteng - Data Analyst</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+
+body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Add your custom styles here */
+
+        /* Popup Container Styles */
+        .popup-container {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+        }
+
+        .popup-content {
+            max-width: 80%;
+            max-height: 80%;
+            margin: auto;
+            display: block;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Additional style to remove border and padding around the clickable image */
+        .clickable {
+            padding: 0;
+            border: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 50%; /* Add border-radius for a circular appearance */
+            outline: none; /* Remove the outline on click for a better appearance */
+        }
+
+        /* Add style for the resume link */
+        #nav li a.icon.fa-file:before {
+            content: '\f15c'; /* Unicode for the file icon in Font Awesome */
+            margin-right: 5px; /* Adjust the spacing to your liking */
+            font-size: 16px; /* Adjust the font size to your liking */
+        }
+
+        /* Intro Section */
+        #intro {
+            background-image: url('images/Intro.jpg');
+            background-size: cover;
+        }
+
+        /* Portfolio Section */
+		
+            #portfolio {
+            background: linear-gradient(45deg, #001f3f, #003366); /* Dark blue gradient */
+            color: #ffffff; /* White text on dark blue background */
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        /* About Me Section */
+        #about {
+            background-image: url('images/AboutMeBackground.jpg');
+            background-size: cover;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #f4f4f4;
+        }
+
+        /* Find Me On Section */
+        #find-me-on {
+            background-color: #333;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        /* Footer Copyright */
+        .footer-copyright {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+
+
+    <!-- Header -->
+    <div id="header">
+        <div class="intro">
+            <!-- Logo -->
+            <div id="logo">
+                <span class="image avatar48 clickable" onclick="openImagePopup()">
+                    <img id="profileImage" src="images/dp.jpeg" alt="Profile Picture"
+                        style="width: 48px; height: 48px; object-fit: cover; border-radius: 50%;" class="clickable">
+                </span>
+                <h1 id="title">Nana Oteng</h1>
+                <p>Data Analyst</p>
+            </div>
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#intro" id="intro-link"><span class="icon solid fa-home">Intro</span></a></li>
+                    <li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a>
+                    </li>
+                    <li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+					<li><a href="Oteng-Project Page Title.docx"><span class="icon solid fa-file">Resume</span></a><li>  
+                    <li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                    
+                    <li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Popup Container -->
+    <div id="imagePopup" class="popup-container" onclick="closeImagePopup()">
+        <span class="popup-close" onclick="closeImagePopup()">&times;</span>
+        <img id="popupImage" class="popup-content" src="images/dp.jpeg" alt="Profile Picture">
+    </div>
+
+	 <!-- JavaScript to enable smooth scrolling -->
+	 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	 <script>
+		 // Smooth scrolling for anchor links
+		 $(document).on('click', 'a[href^="#"]', function (event) {
+			 event.preventDefault();
+ 
+			 $('html, body').animate({
+				 scrollTop: $($.attr(this, 'href')).offset().top
+			 }, 500); // Adjust the animation speed if needed
+		 });
+	 </script>
+
+    <script>
+        function openImagePopup() {
+            document.getElementById('imagePopup').style.display = 'block';
+        }
+
+        function closeImagePopup() {
+            document.getElementById('imagePopup').style.display = 'none';
+        }
+    </script>
+
+					
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+		<!-- Intro -->
+<!-- Intro -->
+<section id="intro" class="one dark cover" style="background-image: url('images/Intro.jpg');">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8); padding: 40px; border-radius: 10px;">
+
+        <header>
+            <h2 class="alt" style="color: black;">Hello! I'm <strong style="color: black; font-weight: bold; display: block;">Nana Oteng</strong> a passionate Data Analyst on a journey to unveil insights from the world of data.</h2>
+            <p style="color: black;">Join me as I explore the stories hidden within the numbers, and let's make sense of data together.</p>
+        </header>
+
+        <footer>
+			<a href="#portfolio" class="button scrolly" style="background-color: #001f3f; color: #ffffff; border: 2px solid #001f3f;">Explore My Work</a>
+		</footer>
+		
+		<style>
+			.button.scrolly:hover {
+				background-color: #003366; /* Change color on hover */
+				color: #ffffff;
+				border: 2px solid #003366; /* Change border color on hover */
+			}
+		</style>
+
+    </div>
+</section>
+
+
+			<!-- Portfolio -->
+			<section id="portfolio" class="two" style="background-image: url('images/Blueblack.jpg'); background-size: cover;">
+				<div class="container">
+			
+					<header>
+						<h2 style="color: #fff; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">Portfolio</h2>
+					</header>
+        <p>Welcome to my digital showcase, where data meets creativity, and insights unfold.</p>
+
+        <!-- About My Work -->
+        <p>In this portfolio, you'll find a curated collection of projects that reflect my passion for data analysis, statistical modeling, and visualization. Each project is a journey—a journey through raw data, uncovering patterns, and transforming complexities into actionable strategies.</p>
+
+        <!-- Featured Projects -->
+        <div class="row">
+            <div class="col-6 col-12-mobile">
+                <article class="item">
+                    <a href="#" class="image fit"><img src="images/Tableau.png" alt="Tableau Projects" /></a>
+                    <header>
+                        <h3 style="font-weight: bold; font-size: 1.2em;">Tableau Projects</h3>
+                        <p><strong>Objective:</strong> Explore the power of analytics in Lorem Ipsum data.</p>
+                    </header>
+                </article>
+            </div>
+
+            <div class="col-6 col-12-mobile">
+                <article class="item">
+                    <a href="#" class="image fit"><img src="images/project2.jpg" alt="Data-driven Decision Dashboard" /></a>
+                    <header>
+                        <h3>Data-driven Decision Dashboard</h3>
+                        <p><strong>Objective:</strong> Develop an interactive dashboard for real-time decision-making.</p>
+                        <p><strong>Tools:</strong> Tableau, SQL, Python</p>
+                        <p><strong>Outcome:</strong> Empowered stakeholders with intuitive data insights.</p>
+                    </header>
+                </article>
+            </div>
+        </div>
+
+        <!-- Exploring Possibilities -->
+        <p>My portfolio isn't just a testament to past achievements; it's a canvas of possibilities. As I continue my academic journey, pursuing a Master of Professional Studies in Analytics with a focus on Applied Machine Intelligence, I'm excited to incorporate cutting-edge techniques into future projects.</p>
+
+
+    </div>
+</section>
+
+
+				<!-- About Me -->
+<section id="about" class="three dark cover" style="background-image: url('images/Portfolio.jpg');">
+    <div class="container" style="background-color: rgba(255, 255, 255, 0.8); padding: 40px; border-radius: 10px;">
+
+        <header>
+            <h2 style="color: black; font-size: 2.5em; font-weight: bold;">About Me</h2>
+        </header>
+
+        <p style="color: black;">Welcome to my data-driven world! I'm Nana Oteng, a dedicated data analyst with over 3 years of hands-on experience, specializing in data analysis, statistical modeling, and visualization using tools such as Excel, SQL, R, Python, and Tableau.
+		</p>
+		<p style="color: black;">
+			I thrive on unraveling complexities within data, driving impactful decisions, and presenting findings through compelling storytelling. Explore my portfolio to see how I've optimized strategies and enhanced operational efficiencies. Let's unlock the immense potential within the world of data together!
+			
+			</p>
+
+    </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="four" style="background-color: #2c3e50; background-image: linear-gradient(45deg, #2c3e50 25%, transparent 25%, transparent 75%, #2c3e50 75%, #2c3e50 100%); background-size: 20px 20px; color: #ecf0f1;">
+
+    <div class="container">
+
+        <header>
+            <h2 style="font-size: 2.5em; font-weight: bold; color: #fff; font-family: 'Arial', sans-serif;">Get in Touch</h2>
+        </header>
+
+        <p style="font-size: 1.2em; color: #fff;">Ready to collaborate or have a question? Feel free to reach out!</p>
+
+        <form method="post" action="https://formspree.io/f/mpzvwqvj">
+			<div class="row">
+				<div class="col-6 col-12-mobile">
+					<label for="name">Your Name:</label>
+					<input type="text" id="name" name="name" placeholder="Your Name" required />
+				</div>
+				<div class="col-6 col-12-mobile">
+					<label for="email">Your Email:</label>
+					<input type="email" id="email" name="email" placeholder="Your Email" required />
+				</div>
+				<div class="col-12">
+					<label for="message">Your Message:</label>
+					<textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+				</div>
+				<div class="col-12">
+					<input type="submit" value="Submit" style="background-color: #3498db; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2em;">
+
+				</div>
+			</div>
+		</form>
+	</section>
+		
+
+		<section id="find-me-on" class="five" style="background-color: #333; color: #fff; padding: 50px 0;">
+			<div class="container">
+				<header>
+					<h2 style="color: #fff;">You can also find me on ...</h2>
+				</header>
+				<!-- Social Icons -->
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/nana-oteng-4b0b55153/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://www.instagram.com/nanakphoteng/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+					<li><a href="mailto:nanakphoteng@gmail.com" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a></li>
+				</ul>
+			</div>
+			  <!-- Copyright footer -->
+			  <div class="footer-copyright">
+				&copy; <span id="currentYear"></span> Nana Oteng - All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>
+			</div>
+		</div>
+		</section>
+
+
+
+<!-- JavaScript to dynamically update the year -->
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
